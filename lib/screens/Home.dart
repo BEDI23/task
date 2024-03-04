@@ -24,10 +24,26 @@ class Home extends StatelessWidget {
         child: Column(
           children: [
             Container(
+              padding: EdgeInsets.symmetric(horizontal: 15),
               decoration: BoxDecoration(
                 color: Colors.white,borderRadius: BorderRadius.circular(30)
               ),
-              child: TextField(),
+              child: TextField(
+                decoration: InputDecoration(
+                  contentPadding: EdgeInsets.all(0),
+                  prefixIcon: Icon(Icons.search, color: tdBlack, size: 20,
+                  ),
+                  prefixIconConstraints: BoxConstraints(
+                    maxHeight: 20,
+                    minWidth: 20
+                  ),
+                  border: InputBorder.none,
+                  hintText: 'Search',
+                  hintStyle: TextStyle(color: tdGrey),
+
+
+                ),
+              ),
             ),
           ],
         ),
